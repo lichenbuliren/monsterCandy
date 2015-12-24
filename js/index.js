@@ -10,3 +10,4 @@ game.state.add('StoryHowto',MonsterCandy.StoryHowto);
 game.state.add('Achievements',MonsterCandy.Achievements);
 game.state.add('MainMenu',MonsterCandy.MainMenu);
 game.state.add('Game',MonsterCandy.Game);
+game.state.start('Boot');
