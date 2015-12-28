@@ -3,6 +3,8 @@
  */
 var MonsterCandy = MonsterCandy || {};
 
+var w = window.innerWidth * window.devicePixelRatio,
+    h = window.innerHeight * window.devicePixelRatio;
 var game = new Phaser.Game(640,960,Phaser.AUTO);
 game.state.add('Boot',MonsterCandy.Boot);
 game.state.add('Preload',MonsterCandy.Preload);

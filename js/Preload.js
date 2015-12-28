@@ -28,6 +28,10 @@ MonsterCandy.Preload.prototype = {
         this.load.image('monster-cover', '../assets/monster-cover.png'); // 怪物封面
         this.load.image('monster-sleeps','../assets/monster-sleeps.png');
 
+        // 生命值
+        this.load.image('life-empty','../assets/life-empty.png');
+        this.load.image('life-full','../assets/life-full.png');
+
         // 糖果资源
         this.load.image('candy-bomb', '../assets/candy-bomb.png'); // 炸弹
         this.load.image('candy-cake', '../assets/candy-cake.png'); // 炸弹
@@ -48,23 +52,24 @@ MonsterCandy.Preload.prototype = {
         this.load.image('howto-monster','../assets/howto-monster.png');
         this.load.image('howto-path','../assets/howto-path.png');
         this.load.image('howto-super','../assets/howto-super.png');
+        this.load.image('screen-story','../assets/screen-story.png');
 
         // other
         this.load.image('explosion','../assets/explosion.png'); // 爆炸
         this.load.image('message-newcandy','../assets/message-newcandy.png');   // 升级提示
 
         // load spritesheet
-        this.load.spritesheet('button-achievements', '../assets/button-achievements.png'); // 成就按钮
+        this.load.spritesheet('button-achievements', '../assets/button-achievements.png',363,131,3); // 成就按钮
         this.load.spritesheet('button-audio', '../assets/button-audio.png', 111, 96, 6); // 音乐图标
         this.load.spritesheet('button-back', '../assets/button-back.png'); // 返回按钮
-        this.load.spritesheet('button-continue', '../assets/button-continue.png'); // 继续按钮
-        this.load.spritesheet('button-pause', '../assets/button-pause.png');
+        this.load.spritesheet('button-continue', '../assets/button-continue.png',358,133,3); // 继续按钮
+        this.load.spritesheet('button-pause', '../assets/button-pause.png',96,98,3);
         this.load.spritesheet('button-restart', '../assets/button-restart.png');
-        this.load.spritesheet('button-start', '../assets/button-start.png');
+        this.load.spritesheet('button-start', '../assets/button-start.png',401,143,3);
 
         // load monster spritesheet
-        this.load.spritesheet('monster-basic-eats','../assets/monster-basic-eats.png');
-        this.load.spritesheet('monster-basic-idle','../assets/monster-basic-idle.png');
+        this.load.spritesheet('monster-basic-eats','../assets/monster-basic-eats.png',111,136,4);
+        this.load.spritesheet('monster-basic-idle','../assets/monster-basic-idle.png',103,131,13);
         this.load.spritesheet('monster-cape-eats','../assets/monster-cape-eats.png');
         this.load.spritesheet('monster-cape-idle','../assets/monster-cape-idle.png');
         this.load.spritesheet('monster-crown-eats','../assets/monster-crown-eats.png');
@@ -72,9 +77,15 @@ MonsterCandy.Preload.prototype = {
         this.load.spritesheet('monster-king-eats','../assets/monster-king-eats.png');
         this.load.spritesheet('monster-king-idle','../assets/monster-king-idle.png');
 
+        this.load.audio('audio-click','../audio/click.ogg',true);
+        this.load.audio('audio-eating','../audio/eating.ogg',true);
+        this.load.audio('audio-music','../audio/music.ogg',true);
+        this.load.audio('audio-newlevel','../audio/newlevel.ogg',true);
+
         // 添加文件加载监听事件
+
     },
     create: function() {
-
+        this.state.start('StoryHowto');
     }
 };

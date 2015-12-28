@@ -1,0 +1,1 @@
+grunt custom --exclude gamepad,keyboard,video,rope,net,ninja,p2,tilemaps,tilesprite,particles,retrofont,rendertexture,debug,system,utils,color,flexgrid --filename phaser-candy --sourcemap true --uglify true
