@@ -18,6 +18,7 @@ MonsterCandy.StoryHowto.prototype = {
         // continue 按钮
         this.continueBtn = this.add.button(this.world.width - 358 - 30,this.world.height-133,'button-continue',function(){
             console.log('you clicked continue button');
+            MonsterCandy.clickMusic.play('',0,1,false);
             // TODO step into next scene
             this.game.state.start('StoryHowto2');
         },this,1,0,2,0);
@@ -83,6 +84,7 @@ MonsterCandy.StoryHowto2.prototype = {
         // continue 按钮
         var continueBtn = this.add.button(this.world.width - 358 - 30,this.world.height-133,'button-continue',function(){
             console.log('you clicked continue button');
+            MonsterCandy.clickMusic.play('',0,1,false);
             // TODO step into next scene
             this.state.start('MainMenu');
         },this,1,0,2,0);

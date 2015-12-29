@@ -2,10 +2,7 @@
  * Created by Heaven on 12/23/15.
  */
 var MonsterCandy = MonsterCandy || {};
-
-var w = window.innerWidth * window.devicePixelRatio,
-    h = window.innerHeight * window.devicePixelRatio;
-var game = new Phaser.Game(640,960,Phaser.AUTO);
+var game = new Phaser.Game(640,960,Phaser.CANVAS);
 game.state.add('Boot',MonsterCandy.Boot);
 game.state.add('Preload',MonsterCandy.Preload);
 game.state.add('StoryHowto',MonsterCandy.StoryHowto);

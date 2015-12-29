@@ -27,7 +27,9 @@ MonsterCandy.Boot.prototype = {
         // 强制竖屏
         this.scale.forcePortrait = true;
         // 开启 Physics.ARCADE 物理引擎
-        this.physics.startSystem(Phaser.Physics.ARCADE);
+        // this.physics.startSystem(Phaser.Physics.ARCADE);
         this.state.start('Preload');
+    },
+    render: function(){
     }
 };
