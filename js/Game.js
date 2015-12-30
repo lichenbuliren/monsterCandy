@@ -184,6 +184,7 @@ MonsterCandy.Game.prototype = {
     startGame: function(){
         console.log('start game');
     },
+    createCandy: function(){},
     update: function() {},
     render: function() {
         game.debug.soundInfo(MonsterCandy.backgroundMusic, 32, 32);

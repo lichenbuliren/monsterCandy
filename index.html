@@ -14,9 +14,7 @@
     <style>
         @font-face {
             font-family: 'ComicBook';
-            src: url('fonts/comicbook.eot');
-            src: url('fonts/comicbook.eot?#iefix') format('embedded-opentype'),
-                url('fonts/comicbook.woff') format('woff'),
+            src: url('fonts/comicbook.woff') format('woff'),
                 url('fonts/comicbook.ttf') format('truetype'),
                 url('fonts/comicbook.svg#comic_booknormal') format('svg');
             font-weight: normal;
@@ -29,13 +27,17 @@
             background-color: #B4D9E7;
             font-family: 'ComicBook';
         }
-        #gamePannel{
-            height:100%;
-            width:100%;
+        .test{
+            font-family: 'normal 1px ComicBook';
+            color:#fff;
+            padding:0;
+            margin:0;
+            display:none;
         }
     </style>
 </head>
 <body>
+<h1 class="test">fps</h1>
 <script src="./lib/phaser-arcade-physics.min.js"></script>
 <script src="./js/Boot.js"></script>
 <script src="./js/Preload.js"></script>

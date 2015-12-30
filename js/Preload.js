@@ -88,10 +88,9 @@ MonsterCandy.Preload.prototype = {
         MonsterCandy.eatMusic = this.add.audio('audio-eating', 1, true, true);
         MonsterCandy.backgroundMusic = this.add.audio('audio-music', 1, true, true);
         MonsterCandy.newlevelMusic = this.add.audio('audio-newlevel', 1, true, true);
-
     },
     update: function(){
         this.cache.isSoundDecoded('audio-click') && this.cache.isSoundDecoded('audio-eating') && this.cache.isSoundDecoded('audio-music') && this.cache.isSoundDecoded('audio-newlevel') && this.state.start('StoryHowto');
-        console.log(this.cache.isSoundDecoded('audio-click') && this.cache.isSoundDecoded('audio-eating') && this.cache.isSoundDecoded('audio-music') && this.cache.isSoundDecoded('audio-newlevel'));
+        // console.log(this.cache.isSoundDecoded('audio-click') && this.cache.isSoundDecoded('audio-eating') && this.cache.isSoundDecoded('audio-music') && this.cache.isSoundDecoded('audio-newlevel'));
     }
 };
