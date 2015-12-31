@@ -8,6 +8,7 @@ MonsterCandy.Game = function() {
     this.monsterStatus = this.STATUS_IDLE;
     this.LIFE = 3;
     this.isPaused = false;
+    this.candyType = ['bobm','chocolate','cupcake','donut','icecream','jelly','lollipop','marshmallow','pink','red','super','teddy'];
 };
 
 MonsterCandy.Game.prototype = {
@@ -21,6 +22,9 @@ MonsterCandy.Game.prototype = {
     create: function() {
         this.VIEW_H = this.world.height;
         this.VIEW_W = this.world.width;
+        this.physics.startSystem(Phaser.Physics.ARCADE);
+        // set the global gravity
+        // this.physics.arcade.gravity.y = 200;
         //background
         this.add.sprite(0, 0, 'background');
         //floor
@@ -102,7 +106,11 @@ MonsterCandy.Game.prototype = {
         this.backToMainBtn.visible = false;
 
         // are you ready ?
-        this.startGame();
+        // this.startGame();
+        this.candGroup = this.add.group();
+        // this.candyIcecream = this.add.sprite(this.VIEW_W - 100,this.VIEW_H - 200,'candy-icecream');
+        // this.physics.enable(this.candyIcecream, Phaser.Physics.ARCADE);
+        // this.input.onDown.add(this.startGame, this); // 绑定点击事件
     },
     handPauseBtnClick: function(btn){
         // stop all animation
@@ -182,9 +190,14 @@ MonsterCandy.Game.prototype = {
         this.state.start('MainMenu');
     },
     startGame: function(){
+        this.candyIcecream.body.velocity.x = -400;
+        this.candyIcecream.body.velocity.y = -500;
+        this.candyIcecream.body.gravity.y = 800;
         console.log('start game');
     },
-    createCandy: function(){},
+    createCandy: function(){
+
+    },
     update: function() {},
     render: function() {
         game.debug.soundInfo(MonsterCandy.backgroundMusic, 32, 32);
